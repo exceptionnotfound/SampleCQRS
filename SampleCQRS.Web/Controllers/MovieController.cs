@@ -31,5 +31,12 @@ namespace SampleCQRS.Web.Controllers
         {
             return (CreateMovieStatus)CommandBus.Execute(command);
         }
+
+        [HttpPost]
+        [Route("update")]
+        public void Update(UpdateMovieCommand command)
+        {
+            CommandBus.Execute(command);
+        }
     }
 }

@@ -45,7 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\CreateMovieCommand.cs" />
+    <Compile Include="Commands\UpdateMovieCommand.cs" />
     <Compile Include="Events\MovieCreatedEvent.cs" />
+    <Compile Include="Events\MovieReleaseDateChangedEvent.cs" />
+    <Compile Include="Events\MovieRunningTimeChangedEvent.cs" />
+    <Compile Include="Events\MovieTitleChangedEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

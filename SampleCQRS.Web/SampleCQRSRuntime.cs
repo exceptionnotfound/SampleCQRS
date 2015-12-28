@@ -9,12 +9,12 @@ using System.Web;
 
 namespace SampleCQRS.Web
 {
-    public class SampleCQRSRuntime : SimpleCqrs.SimpleCqrsRuntime<UnityServiceLocator>
+public class SampleCQRSRuntime : SimpleCqrs.SimpleCqrsRuntime<UnityServiceLocator>
+{
+    protected override IEventStore GetEventStore(SimpleCqrs.IServiceLocator serviceLocator)
     {
-        protected override IEventStore GetEventStore(SimpleCqrs.IServiceLocator serviceLocator)
-        {
-            var configuration = new SqlServerConfiguration(Constants.SampleCQRSConnectionString);
-            return new SqlServerEventStore(configuration, new JsonDomainEventSerializer());
-        }
+        var configuration = new SqlServerConfiguration(Constants.SampleCQRSConnectionString);
+        return new SqlServerEventStore(configuration, new JsonDomainEventSerializer());
     }
+}
 }

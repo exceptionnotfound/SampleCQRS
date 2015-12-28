@@ -13,21 +13,21 @@ using System.Web.SessionState;
 
 namespace SampleCQRS.Web
 {
-    public class Global : System.Web.HttpApplication
+public class Global : System.Web.HttpApplication
+{
+    public static SampleCQRSRuntime Runtime { get; set; }
+    protected void Application_Start()
     {
-        public static SampleCQRSRuntime Runtime { get; set; }
-        protected void Application_Start()
-        {
-            Runtime = new SampleCQRSRuntime();
-            Runtime.Start();
+        Runtime = new SampleCQRSRuntime();
+        Runtime.Start();
 
-            AreaRegistration.RegisterAllAreas();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
-        }
-
-        protected void Application_End()
-        {
-            Runtime.Shutdown();
-        }
+        AreaRegistration.RegisterAllAreas();
+        GlobalConfiguration.Configure(WebApiConfig.Register);
     }
+
+    protected void Application_End()
+    {
+        Runtime.Shutdown();
+    }
+}
 }
