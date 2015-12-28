@@ -75,6 +75,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Movies.mdf" />
+    <Content Include="App_Data\Movies_log.ldf">
+      <DependentUpon>Movies.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\ReadModel.mdf" />
+    <Content Include="App_Data\ReadModel_log.ldf">
+      <DependentUpon>ReadModel.mdf</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
