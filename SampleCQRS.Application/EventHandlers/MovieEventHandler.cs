@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 namespace SampleCQRS.Application.EventHandlers
 {
     public class MovieEventHandler : IHandleDomainEvents<MovieCreatedEvent>,
-                                     IHandleDomainEvents<MovieTitleChangedEvent>,
-                                     IHandleDomainEvents<MovieReleaseDateChangedEvent>,
-                                     IHandleDomainEvents<MovieRunningTimeChangedEvent>
+                                        IHandleDomainEvents<MovieTitleChangedEvent>,
+                                        IHandleDomainEvents<MovieReleaseDateChangedEvent>,
+                                        IHandleDomainEvents<MovieRunningTimeChangedEvent>
     {
         public void Handle(MovieCreatedEvent createdEvent)
         {
