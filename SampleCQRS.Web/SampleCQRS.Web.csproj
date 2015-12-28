@@ -83,9 +83,13 @@
     <Content Include="App_Data\ReadModel_log.ldf">
       <DependentUpon>ReadModel.mdf</DependentUpon>
     </Content>
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
