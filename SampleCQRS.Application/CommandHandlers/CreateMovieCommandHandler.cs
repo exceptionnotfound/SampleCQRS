@@ -22,14 +22,14 @@ namespace SampleCQRS.Application.CommandHandlers
             _repository = repository;
         }
 
-public override void Handle(CreateMovieCommand command)
-{
-    Return(ValidateCommand(command));
+        public override void Handle(CreateMovieCommand command)
+        {
+            Return(ValidateCommand(command));
 
-    var location = new Domain.Movie(Guid.NewGuid(), command.Title, command.ReleaseDate, command.RunningTimeMinutes);
+            var location = new Domain.Movie(Guid.NewGuid(), command.Title, command.ReleaseDate, command.RunningTimeMinutes);
 
-    _repository.Save(location);
-}
+            _repository.Save(location);
+        }
         protected CreateMovieStatus ValidateCommand(CreateMovieCommand command)
         {
             return CreateMovieStatus.Successful;
