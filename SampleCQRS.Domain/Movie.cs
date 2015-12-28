@@ -13,5 +13,14 @@ namespace SampleCQRS.Domain
         public DateTime ReleaseDate { get; set; }
         public int RunningTimeMinutes { get; set; }
         public List<MovieReview> Reviews { get; set; }
+
+        public Movie(Guid movieId, string title, DateTime releaseDate, int runningTimeMinutes)
+        {
+            Id = movieId;
+            Title = title;
+            ReleaseDate = releaseDate;
+            RunningTimeMinutes = runningTimeMinutes;
+            Reviews = new List<MovieReview>();
+        }
     }
 }

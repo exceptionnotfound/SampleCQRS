@@ -48,10 +48,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandHandlers\CreateMovieCommandHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SampleCQRS.Contracts\SampleCQRS.Contracts.csproj">
+      <Project>{dc49c0a2-a67c-4879-87ee-7eea9a6c1771}</Project>
+      <Name>SampleCQRS.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SampleCQRS.Domain\SampleCQRS.Domain.csproj">
+      <Project>{2938e13f-efd8-42aa-92d7-43cfeb2ed7f2}</Project>
+      <Name>SampleCQRS.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,5 +13,10 @@ namespace SampleCQRS.Domain
         public string Reviewer { get; set; }
         public string Publication { get; set; }
 
+        public MovieReview(Guid reviewId, string contentm, string reviewer, string publication)
+        {
+            //Implementation done in Step 6
+        }
+
     }
 }
