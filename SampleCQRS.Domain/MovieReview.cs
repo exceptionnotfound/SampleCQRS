@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SampleCQRS.Domain
 {
-    public class MovieReview : AggregateRoot
+    public class MovieReview
     {
         public string Content { get; set; }
         public string Reviewer { get; set; }
